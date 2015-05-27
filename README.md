@@ -2,6 +2,8 @@
 
 TODO: Write a gem description
 
+TODO: Development In Progress
+
 ## Installation
 
 Add this line to your application's Gemfile:
