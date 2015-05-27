@@ -1,0 +1,8 @@
+Description:
+    Explain the generator
+
+Example:
+    rails generate angular_generators Thing
+
+    This will create:
+        what/will/it/create
