@@ -1,8 +1,21 @@
 Description:
-    Explain the generator
+    Scaffold an Controller an modules. Controller with the base Create,
+    Update and Delete functions.
+
+    Modules comes with the default json null object. so here add your Rails 
+    model attributes here.
+
+    Create Update and delete action url added to the 
 
 Example:
-    rails generate angular:scaffold Thing
+    rails generate angular:scaffold product
+
+    	Will create a controller called "products" it will contain initialize 
+    	function. A model module will create under services/models directory,
 
     This will create:
-        what/will/it/create
+        app/assets/javascripts/angular/controllers/products_controller.js.coffee
+        app/assets/javascripts/angular/services/models/product.js.coffee
+
+    This will update:
+        app/assets/javascripts/angular/services/routes.js.coffee

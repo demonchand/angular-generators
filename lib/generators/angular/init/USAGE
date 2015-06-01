@@ -1,8 +1,13 @@
 Description:
-    Explain the generator
+    Create the base structure of the Angular.
 
 Example:
-    rails generate angular:scaffold Thing
+    rails generate angular:init
 
     This will create:
-        what/will/it/create
+        app/assets/javascripts/angular/YourApp.js.coffee
+        app/assets/javascripts/angular/controllers.js.coffee
+        app/assets/javascripts/angular/filters.js.coffee
+        app/assets/javascripts/angular/services.js.coffee
+        app/assets/javascripts/angular/directives.js.coffee
+        app/assets/javascripts/angular/application_controller.js.coffee
