@@ -1,1 +1,0 @@
-puts "Template available soon"
