@@ -17,6 +17,10 @@ module Angular
         self.class.help(Thor::Base.shell.new)
         exit
       end
+
+      def rails_application_name
+        Rails.application.class.name.split("::").first.camelcase(:lower)
+      end
     end
   end
 end

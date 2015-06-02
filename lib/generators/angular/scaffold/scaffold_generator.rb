@@ -12,8 +12,11 @@ module Angular
         super
         print_usage unless scaffold_name.underscore =~ /^[a-z][a-z0-9_\/]+$/
 
-        #copy_file "initializer.rb", "public/#{plural_name}.rb"
-        template "initializer.rb", "public/#{plural_name}.rb"
+        controllers_path = "app/assets/javascripts/angular/controllers"
+        modules_path = "app/assets/javascripts/angular/services/models"
+
+        template "controller.js.coffee", controllers_path + "/#{plural_name}_controller.js.coffee"
+        template "module.js.coffee", modules_path + "/#{scaffold_name}.js.coffee"
       end
 
       private
@@ -22,7 +25,8 @@ module Angular
         scaffold_name.underscore.pluralize
       end
 
-      def app_name
+      def singular_name
+        scaffold_name.camelcase
       end
       
     end
