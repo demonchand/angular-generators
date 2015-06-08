@@ -1,33 +1,98 @@
-# Angular::Generators
+# Angular Generators
 
-TODO: Write a gem description
+This generator will provide you the base structure Angular on your
+rails projects. It has init and scaffold generating scripts.
 
-TODO: Development In Progress
+# Setup
 
-## Installation
+Add the gem to your Gemfile.
 
-Add this line to your application's Gemfile:
+$ gem "angular-generators", group: :development
 
-```ruby
-gem 'angular-generators'
-```
+=== Step 1
 
-And then execute:
+Initially you have run the following command to
 
-    $ bundle
+  rails g angular:init
 
-Or install it yourself as:
+The above initialize command will initialize the Angular directory
+structure like as follows,
 
-    $ gem install angular-generators
+For example your application name is depot,
 
-## Usage
+  app/assets/javascripts/angular/YOUR_APP_NAMEApp.js.coffee
+  app/assets/javascripts/angular/controllers.js.coffee
+  app/assets/javascripts/angular/services.js.coffee
+  app/assets/javascripts/angular/directives.js.coffee
+  app/assets/javascripts/angular/filters.js.coffee
+  app/assets/javascripts/angular/services/routes.js.coffee
+  app/assets/javascripts/angular/controllers/application_controller.js.coffee
 
-TODO: Write usage instructions here
+After the initial setup paste the following code on your application
 
-## Contributing
+app/views/layouts/application.html.erb
 
-1. Fork it ( https://github.com/[my-github-username]/angular-generators/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+<html>
+
+Change to
+
+<html ng-app=YOUR_APP_NAMEApp" ng-controller="ApplicationController" ng-init="initialize()">
+
+
+Add angularjs google api to your application javascript tag like as
+follows,
+
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js" %>
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js" %>
+
+
+# Generate module
+
+Run this generator to include modules to your angular section,
+
+  rails g angular:scaffold Post
+          or
+  rails g angular:scaffold post
+
+It generates the controller and service module and update the routes
+file. Here are the example files list,
+
+app/assets/javascripts/angular/controllers/posts_controller.js.coffee
+app/assets/javascripts/angular/services/models/post.js.coffee
+app/assets/javascripts/angular/services/routes.js.coffee
+
+So add the controller tag to your corresponding posts view file.
+
+Ex,
+
+<div ng-controller="PostsController" ng-init="initialize()">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+
+# Gon Usage
+
+For connecting your rails controller to javascripts you may try this
+gon Gem. For sample application we've used the Gon Gem integrate the
+application.
+
+Scaffolding URL goes here,
+
+
+# Wiki
+
+Routes will covered ASAP.
+
+# Contributing
+
+If you want to contribute to this project, you can download it from
+Github repository, I develop this using Ruby 2.1.2. I think it should
+work with later vestions too.
+
+# Issue
+
+It you found any issue, pease let me know.
+
+
+
