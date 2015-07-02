@@ -21,13 +21,13 @@ structure like as follows,
 For example your application name is depot,
 
 ```
-  app/assets/javascripts/angular/YOUR_APP_NAMEApp.js.coffee
-  app/assets/javascripts/angular/controllers.js.coffee
-  app/assets/javascripts/angular/services.js.coffee
-  app/assets/javascripts/angular/directives.js.coffee
-  app/assets/javascripts/angular/filters.js.coffee
-  app/assets/javascripts/angular/services/routes.js.coffee
-  app/assets/javascripts/angular/controllers/application_controller.js.coffee
+app/assets/javascripts/angular/YOUR_APP_NAMEApp.js.coffee
+app/assets/javascripts/angular/controllers.js.coffee
+app/assets/javascripts/angular/services.js.coffee
+app/assets/javascripts/angular/directives.js.coffee
+app/assets/javascripts/angular/filters.js.coffee
+app/assets/javascripts/angular/services/routes.js.coffee
+app/assets/javascripts/angular/controllers/application_controller.js.coffee
 ```
 
 After the initial setup paste the following code on your application
@@ -47,8 +47,8 @@ Add angularjs google api to your application javascript tag like as
 follows,
 
 ``` erb
-  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js" %>
-  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js" %>
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js" %>
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js" %>
 ```
 
 # Generate module
@@ -56,9 +56,11 @@ follows,
 Run this generator to include modules to your angular section,
 
 ```
-  rails g angular:scaffold Post
-          or
-  rails g angular:scaffold post
+rails g angular:scaffold Post
+
+        (OR)
+
+rails g angular:scaffold post
 
 ```
 It generates the controller and service module and update the routes
