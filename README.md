@@ -3,13 +3,11 @@
 This generator will provide you the base structure Angular on your
 rails projects. It has init and scaffold generating scripts.
 
-# Setup
+## Setup
 
 Add the gem to your Gemfile.
 
 `gem "angular-generators", group: :development`
-
-=== Step 1
 
 Initially you have run the following command to
 
@@ -51,7 +49,7 @@ follows,
 <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js" %>
 ```
 
-# Generate module
+## Generate module
 
 Run this generator to include modules to your angular section,
 
@@ -83,7 +81,7 @@ Ex,
 <h1>Listing Posts</h1>
 ```
 
-# Gon Usage
+## Gon Usage
 
 For connecting your rails controller to javascripts you may try this
 gon Gem. For sample application we've used the Gon Gem integrate the
@@ -92,17 +90,17 @@ application.
 Scaffolding URL goes here,
 
 
-# Wiki
+## Wiki
 
 Routes will covered ASAP.
 
-# Contributing
+## Contributing
 
 If you want to contribute to this project, you can download it from
 Github repository, I develop this using Ruby 2.1.2. I think it should
 work with later vestions too.
 
-# Issue
+## Issue
 
 It you found any issue, pease let me know.
 
