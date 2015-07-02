@@ -7,10 +7,10 @@
 
     _self = this
 
-    #$scope.product = new <%= singular_name %>()
+    #$scope.<%= singular_name.pluralize.downcase %> = new <%= singular_name %>()
 
     $scope.initialize = ->
-      console.log "<%= singular_name.pluralize %> DialogController initializer"
+      console.log "<%= singular_name.pluralize %> Dialog Controller initializer"
       # Initializer code goes here
   ])
 
