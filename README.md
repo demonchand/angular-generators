@@ -89,7 +89,7 @@ For connecting your rails controller to javascripts you may try this
 
 #### Sample Application
 
-`Scaffolding URL goes here`
+Sample Application [Scaffolding][https://github.com/demonchand/scaffolding].
 
 
 #### Wiki
