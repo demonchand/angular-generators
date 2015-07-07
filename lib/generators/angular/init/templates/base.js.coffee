@@ -1,6 +1,6 @@
-"use strict"
+	"use strict"
 
-# Declare app-level module for services, filters, controllers, directives, etc.
+# Init Angular App modules
 appModule = angular.module("<%= rails_application_name %>App",
  [ "ngSanitize",
   "<%= rails_application_name %>App.controllers",
