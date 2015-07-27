@@ -16,8 +16,23 @@ module Angular
 			  template "filters.js.coffee", angular_path + "filters.js.coffee"
 			  template "application_controller.js.coffee", angular_path + "controllers/application_controller.js.coffee"
 			  template "routes.js.coffee", angular_path + "services/routes.js.coffee"
+
+			  include_js_and_css
 			end
 
+			private
+
+			def include_js_and_css
+				puts
+        puts "Add the following changes to your application layout"
+        puts
+        puts
+        puts "- <html>"
+        puts "+ <html ng-app='#{rails_application_name}App' ng-controller='ApplicationController' ng-init='initialize()'>"
+        puts
+        puts "+ <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js' %>"
+        puts "+ <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js' %>"
+			end
 	  end
 	end
 end
