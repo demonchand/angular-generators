@@ -1,29 +1,29 @@
 require 'generators/angular'
 
 module Angular
-	module Generators
-	  class InitGenerator < Base
+  module Generators
+    class InitGenerator < Base
 
 
-			# Create the Angular Directory structere and Base files
-			def copy_initializer
-			  angular_path = "app/assets/javascripts/angular/"
+      # Create the Angular Directory structere and Base files
+      def copy_initializer
+        angular_path = "app/assets/javascripts/angular/"
 
-			  template "base.js.coffee", angular_path + "#{rails_application_name}App.js.coffee"
-			  template "controllers.js.coffee", angular_path + "controllers.js.coffee"
-			  template "services.js.coffee", angular_path + "services.js.coffee"
-			  template "directives.js.coffee", angular_path + "directives.js.coffee"
-			  template "filters.js.coffee", angular_path + "filters.js.coffee"
-			  template "application_controller.js.coffee", angular_path + "controllers/application_controller.js.coffee"
-			  template "routes.js.coffee", angular_path + "services/routes.js.coffee"
+        template "base.js.coffee", angular_path + "#{rails_application_name}App.js.coffee"
+        template "controllers.js.coffee", angular_path + "controllers.js.coffee"
+        template "services.js.coffee", angular_path + "services.js.coffee"
+        template "directives.js.coffee", angular_path + "directives.js.coffee"
+        template "filters.js.coffee", angular_path + "filters.js.coffee"
+        template "application_controller.js.coffee", angular_path + "controllers/application_controller.js.coffee"
+        template "routes.js.coffee", angular_path + "services/routes.js.coffee"
 
-			  include_js_and_css
-			end
+        include_js_and_css
+      end
 
-			private
+      private
 
-			def include_js_and_css
-				puts
+      def include_js_and_css
+        puts
         puts "Add the following changes to your application layout"
         puts
         print red "      - <html>\n"
@@ -32,7 +32,7 @@ module Angular
         print green "      + <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js' %>\n"
         print green "      + <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js' %>\n"
         puts
-			end
-	  end
-	end
+      end
+    end
+  end
 end
