@@ -26,11 +26,11 @@ module Angular
         puts
         puts "Add the following changes to your application layout"
         puts
-        print red "      - <html>\n"
-        print green "      + <html ng-app='#{rails_application_name}App' ng-controller='ApplicationController' ng-init='initialize()'>\n"
+        puts red "- <html>"
+        puts green "+ <html ng-app='#{rails_application_name}App' ng-controller='ApplicationController' ng-init='initialize()'>"
         puts
-        print green "      + <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js' %>\n"
-        print green "      + <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js' %>\n"
+        puts green "+ <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js' %>"
+        puts green "+ <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js' %>"
         puts
       end
     end
