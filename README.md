@@ -91,6 +91,7 @@ For connecting your rails controller to javascripts you may try this
 
 Sample Application [Scaffolding](https://github.com/demonchand/scaffolding).
 
+Sample App Demo URL [Scaffolding](http://scaffolding.herokuapp.com)
 
 #### Wiki
 
