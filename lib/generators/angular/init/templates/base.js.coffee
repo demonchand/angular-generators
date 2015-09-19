@@ -1,4 +1,4 @@
-	"use strict"
+"use strict"
 
 # Init Angular App modules
 appModule = angular.module("<%= rails_application_name %>App",
